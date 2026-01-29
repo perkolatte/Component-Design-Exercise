@@ -1,0 +1,1 @@
+// Core component that holds the state for space missions. It is responsible for rendering each mission's details and actions. It manages the mission list and its statuses, orchestrating the data flow to child components.
