@@ -1,10 +1,14 @@
 import { useState } from "react";
-import "./App.css";
+import MissionControl from "./MissionControl.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
 
-  return <></>;
+  return (
+    <>
+      <MissionControl missions={missions} />
+    </>
+  );
 }
 
 export default App;
