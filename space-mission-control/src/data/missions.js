@@ -3,7 +3,7 @@ export const missions = [
   {
     id: 1,
     name: "Secure the Outlaw Star",
-    status: "completed",
+    status: "planned",
     description:
       "Locate and acquire the XGP15A-II (Outlaw Star) so Gene and Jim can begin legitimate bounty work.",
     objective: "Recover ship and verify Caster Gun systems",
@@ -14,7 +14,7 @@ export const missions = [
   {
     id: 2,
     name: "Protect Melfina",
-    status: "completed",
+    status: "planned",
     description:
       "Safeguard Melfina from factions who want to exploit her connection to the Galactic Leyline.",
     objective: "Escort Melfina to a safe terminal and gather intel",
@@ -25,7 +25,7 @@ export const missions = [
   {
     id: 3,
     name: "Recover the Caster Gun Fragment",
-    status: "completed",
+    status: "planned",
     description:
       "Track down a stolen fragment of the Caster Gun needed to unlock greater power.",
     objective: "Retrieve fragment from rival bounty hunters",
@@ -36,7 +36,7 @@ export const missions = [
   {
     id: 4,
     name: "Rescue the Merchant Fleet",
-    status: "completed",
+    status: "planned",
     description:
       "Intervene when a merchant convoy is attacked by space pirates to restore trade routes.",
     objective: "Eliminate pirate threat and escort survivors",
@@ -47,7 +47,7 @@ export const missions = [
   {
     id: 5,
     name: "Investigate the Galactic Leyline Lead",
-    status: "active",
+    status: "planned",
     description:
       "Follow an encrypted lead that may reveal part of the Galactic Leyline's coordinates.",
     objective: "Decrypt transmissions and verify coordinates",
@@ -58,7 +58,7 @@ export const missions = [
   {
     id: 6,
     name: "Negotiate with the Kid Pirates",
-    status: "active",
+    status: "planned",
     description:
       "Parley or fight with a gang of young pirates holding key information about a target ship.",
     objective: "Secure cooperation or neutralize the gang",

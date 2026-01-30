@@ -6,19 +6,32 @@ import { useState } from "react";
 import MissionCard from "./MissionCard";
 import MissionFilter from "./MissionFilter";
 import MissionAction from "./MissionAction";
+import "../styles/MissionControl.css";
 
 // Takes an array of missions from props, each mission with id, name, status, and crew.
 function MissionControl({ missions }) {
+  const [missionList, setMissionList] = useState(missions);
+
   const [filter, setFilter] = useState("all");
-  const visibleMissions = missions.filter(
+  const visibleMissions = missionList.filter(
     (m) => filter === "all" || m.status === filter,
   );
+
+  function updateMissionStatus(missionId, newStatus) {
+    setMissionList((prev) =>
+      prev.map((m) => (m.id === missionId ? { ...m, status: newStatus } : m)),
+    );
+  }
 
   return (
     <div className="mission-control">
       <h1>Mission Control</h1>
 
       <MissionFilter filter={filter} onFilterChange={setFilter} />
+
+      <div className="screenreader-only" aria-live="polite">
+        {visibleMissions.length} missions shown
+      </div>
 
       <div className="mission-list">
         {visibleMissions.map((mission) => (
@@ -31,6 +44,7 @@ function MissionControl({ missions }) {
             <MissionAction
               missionId={mission.id}
               currentStatus={mission.status}
+              onStatusChange={updateMissionStatus}
             />
           </div>
         ))}
