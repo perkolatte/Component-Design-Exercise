@@ -16,9 +16,9 @@ function MissionControl({ missionData }) {
   const [missionList, setMissionList] = useState(missionData);
   const [displayMode, setDisplayMode] = useState("first");
 
-  const [filter, setFilter] = useState("all");
+  const [filter, setFilter] = useState("All");
   const visibleMissions = missionList.filter(
-    (m) => filter === "all" || m.status === filter,
+    (m) => filter === "All" || m.status === filter,
   );
 
   function updateMissionStatus(missionId, newStatus) {

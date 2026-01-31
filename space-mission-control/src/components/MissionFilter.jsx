@@ -2,10 +2,10 @@
 
 function MissionFilter({ filter, onFilterChange }) {
   const options = [
-    { key: "all", label: "All" },
-    { key: "planned", label: "Planned" },
-    { key: "active", label: "Active" },
-    { key: "completed", label: "Completed" },
+    { key: "All", label: "All" },
+    { key: "Planned", label: "Planned" },
+    { key: "Active", label: "Active" },
+    { key: "Completed", label: "Completed" },
   ];
 
   const handleKeyDown = (e, idx) => {
@@ -31,7 +31,7 @@ function MissionFilter({ filter, onFilterChange }) {
           role="radio"
           aria-checked={filter === opt.key}
           tabIndex={filter === opt.key ? 0 : -1}
-          className={filter === opt.key ? "active" : ""}
+          className={filter === opt.key ? "Active" : ""}
           onClick={() => onFilterChange(opt.key)}
           onKeyDown={(e) => handleKeyDown(e, idx)}
         >

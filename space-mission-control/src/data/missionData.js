@@ -3,7 +3,7 @@ export const missionData = [
   {
     id: 1,
     name: "Secure the Outlaw Star",
-    status: "planned",
+    status: "Planned",
     description:
       "Locate and acquire the XGP15A-II (Outlaw Star) so Gene and Jim can begin legitimate bounty work.",
     objective: "Recover ship and verify Caster Gun systems",
@@ -14,7 +14,7 @@ export const missionData = [
   {
     id: 2,
     name: "Protect Melfina",
-    status: "planned",
+    status: "Planned",
     description:
       "Safeguard Melfina from factions who want to exploit her connection to the Galactic Leyline.",
     objective: "Escort Melfina to a safe terminal and gather intel",
@@ -25,7 +25,7 @@ export const missionData = [
   {
     id: 3,
     name: "Recover the Caster Gun Fragment",
-    status: "planned",
+    status: "Planned",
     description:
       "Track down a stolen fragment of the Caster Gun needed to unlock greater power.",
     objective: "Retrieve fragment from rival bounty hunters",
@@ -36,7 +36,7 @@ export const missionData = [
   {
     id: 4,
     name: "Rescue the Merchant Fleet",
-    status: "planned",
+    status: "Planned",
     description:
       "Intervene when a merchant convoy is attacked by space pirates to restore trade routes.",
     objective: "Eliminate pirate threat and escort survivors",
@@ -47,7 +47,7 @@ export const missionData = [
   {
     id: 5,
     name: "Investigate the Galactic Leyline Lead",
-    status: "planned",
+    status: "Planned",
     description:
       "Follow an encrypted lead that may reveal part of the Galactic Leyline's coordinates.",
     objective: "Decrypt transmissions and verify coordinates",
@@ -58,7 +58,7 @@ export const missionData = [
   {
     id: 6,
     name: "Negotiate with the Kid Pirates",
-    status: "planned",
+    status: "Planned",
     description:
       "Parley or fight with a gang of young pirates holding key information about a target ship.",
     objective: "Secure cooperation or neutralize the gang",
@@ -69,7 +69,7 @@ export const missionData = [
   {
     id: 7,
     name: "Rescue Suzuka",
-    status: "planned",
+    status: "Planned",
     description:
       "Extraction of Suzuka from an assassination plot tied to an assassination syndicate.",
     objective: "Locate safehouse and extract target",
@@ -80,7 +80,7 @@ export const missionData = [
   {
     id: 8,
     name: "Recover the Bio-Interface Module",
-    status: "planned",
+    status: "Planned",
     description:
       "Retrieve the interface module needed to safely connect Melfina with the Outlaw Star's systems.",
     objective: "Infiltrate guarded facility and recover device",
@@ -91,7 +91,7 @@ export const missionData = [
   {
     id: 9,
     name: "Break into the Antagonist's Vault",
-    status: "planned",
+    status: "Planned",
     description:
       "Steal crucial data from a powerful antagonist who is also searching the Leyline.",
     objective: "Obtain decrypted map fragment",
@@ -102,7 +102,7 @@ export const missionData = [
   {
     id: 10,
     name: "Equip and Upgrade the Outlaw Star",
-    status: "planned",
+    status: "Planned",
     description:
       "Outfit the Outlaw Star with improved shield generators, reinforced hull plating, and a calibrated Caster interface to prepare for upcoming threats.",
     objective:
@@ -114,7 +114,7 @@ export const missionData = [
   {
     id: 11,
     name: "Assemble Leyline Coordinates",
-    status: "planned",
+    status: "Planned",
     description:
       "Combine gathered data fragments to reveal the full path to the Galactic Leyline.",
     objective: "Synthesize fragments and confirm final coordinates",
@@ -125,7 +125,7 @@ export const missionData = [
   {
     id: 12,
     name: "Journey to the Galactic Leyline",
-    status: "planned",
+    status: "Planned",
     description:
       "Final expedition to the Leyline once coordinates are confirmed — risk and reward are maximal.",
     objective: "Navigate to Leyline and unlock its secrets",

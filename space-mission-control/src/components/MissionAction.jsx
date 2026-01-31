@@ -10,27 +10,27 @@ function MissionAction({ missionId, currentStatus, onStatusChange }) {
 
   return (
     <div className="mission-action">
-      {currentStatus === "planned" && (
+      {currentStatus === "Planned" && (
         <button
-          onClick={() => onStatusChange(missionId, "active")}
+          onClick={() => onStatusChange(missionId, "Active")}
           aria-label={`Launch mission ${missionId}`}
         >
           Launch
         </button>
       )}
 
-      {currentStatus === "active" && (
+      {currentStatus === "Active" && (
         <button
-          onClick={() => onStatusChange(missionId, "completed")}
+          onClick={() => onStatusChange(missionId, "Completed")}
           aria-label={`Complete mission ${missionId}`}
         >
           Complete
         </button>
       )}
 
-      {currentStatus === "completed" && (
+      {currentStatus === "Completed" && (
         <button
-          onClick={() => onStatusChange(missionId, "planned")}
+          onClick={() => onStatusChange(missionId, "Planned")}
           aria-label={`Restart mission ${missionId}`}
         >
           Restart
