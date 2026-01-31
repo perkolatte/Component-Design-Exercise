@@ -1,5 +1,5 @@
 // Outlaw Star — mission list (in-universe objectives the crew must undertake)
-export const missions = [
+export const missionData = [
   {
     id: 1,
     name: "Secure the Outlaw Star",
@@ -8,7 +8,7 @@ export const missions = [
       "Locate and acquire the XGP15A-II (Outlaw Star) so Gene and Jim can begin legitimate bounty work.",
     objective: "Recover ship and verify Caster Gun systems",
     location: "Seaside shipyard / Frontier space",
-    characters: [1, 2, 3],
+    characters: [1, 2, 3, 7],
     reward: "Ship ownership & initial funds",
   },
   {
@@ -63,7 +63,7 @@ export const missions = [
       "Parley or fight with a gang of young pirates holding key information about a target ship.",
     objective: "Secure cooperation or neutralize the gang",
     location: "Slave's Reef",
-    characters: [1, 2, 6],
+    characters: [1, 2],
     reward: "Local contacts & intelligence",
   },
   {
@@ -85,7 +85,7 @@ export const missions = [
       "Retrieve the interface module needed to safely connect Melfina with the Outlaw Star's systems.",
     objective: "Infiltrate guarded facility and recover device",
     location: "Corporate research moon",
-    characters: [2, 3, 6],
+    characters: [2, 3],
     reward: "Safe Melfina-ship interface",
   },
   {
@@ -130,7 +130,7 @@ export const missions = [
       "Final expedition to the Leyline once coordinates are confirmed — risk and reward are maximal.",
     objective: "Navigate to Leyline and unlock its secrets",
     location: "Galactic Leyline",
-    characters: [1, 2, 3, 4, 5, 6],
+    characters: [1, 2, 3, 4, 5],
     reward: "Unlimited possibilities / ultimate discovery",
   },
 ];

@@ -1,8 +1,7 @@
 // Outlaw Star — characters
-export const crew = [
+export const crewData = [
   {
     id: 1,
-    name: "Gene Starwind",
     firstName: "Gene",
     lastName: "Starwind",
     role: "Captain / Gunman",
@@ -12,7 +11,6 @@ export const crew = [
   },
   {
     id: 2,
-    name: "Jim Hawking",
     firstName: "Jim",
     lastName: "Hawking",
     role: "Mechanic",
@@ -22,7 +20,6 @@ export const crew = [
   },
   {
     id: 3,
-    name: "Melfina",
     firstName: "Melfina",
     lastName: "",
     role: "Navigator",
@@ -32,7 +29,6 @@ export const crew = [
   },
   {
     id: 4,
-    name: "Aisha Clan-Clan",
     firstName: "Aisha",
     lastName: "Clan-Clan",
     role: "Muscle",
@@ -41,7 +37,6 @@ export const crew = [
   },
   {
     id: 5,
-    name: '"Twilight" Suzuka',
     firstName: "Suzuka",
     lastName: "",
     nickname: "Twilight",
@@ -51,14 +46,6 @@ export const crew = [
   },
   {
     id: 6,
-    name: "Unknown",
-    firstName: "Unknown",
-    lastName: "",
-    role: "Unknown",
-    description: "Placeholder - crew entry missing in data source",
-  },
-  {
-    id: 7,
     name: "Gilliam II",
     firstName: "Gilliam",
     lastName: "II",
@@ -67,7 +54,7 @@ export const crew = [
     link: "https://outlawstar.fandom.com/wiki/Gilliam_II",
   },
   {
-    id: 8,
+    id: 7,
     name: '"Hot Ice" Hilda',
     firstName: "Hilda",
     lastName: "",

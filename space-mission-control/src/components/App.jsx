@@ -1,14 +1,13 @@
 import { useState } from "react";
 import MissionControl from "./MissionControl.jsx";
-import { missions } from "../data/missions.js";
-("../data/missions.js");
+import { missionData } from "../data/missionData.js";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <MissionControl missions={missions} />
+      <MissionControl missionData={missionData} />
     </>
   );
 }

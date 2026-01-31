@@ -1,4 +1,4 @@
-// Core component that holds the state for space missions.
+// Core component that holds the state for space missionData.
 // Responsible for rendering each mission's details and actions.
 // Manages the mission list and its statuses, orchestrating the data flow to child components.
 
@@ -6,13 +6,15 @@ import { useState } from "react";
 import MissionCard from "./MissionCard";
 import MissionFilter from "./MissionFilter";
 import MissionAction from "./MissionAction";
-import "../styles/MissionControl.css";
-import { crew as crewData } from "../data/crew";
+import { crewData } from "../data/crewData";
+import { missionData } from "../data/missionData";
 import { getCrewNamesByIds } from "../utils/crewUtils";
+import "../styles/MissionControl.css";
 
-// Takes an array of missions from props, each mission with id, name, status, and crew.
-function MissionControl({ missions }) {
-  const [missionList, setMissionList] = useState(missions);
+// Takes an array of missionData from props, each mission with id, name, status, and crew.
+function MissionControl({ missionData }) {
+  const [missionList, setMissionList] = useState(missionData);
+  const [displayMode, setDisplayMode] = useState("first");
 
   const [filter, setFilter] = useState("all");
   const visibleMissions = missionList.filter(
@@ -45,10 +47,14 @@ function MissionControl({ missions }) {
                 // if mission stores numeric IDs use crew data to format names
                 Array.isArray(mission.crew) &&
                 typeof mission.crew[0] === "number"
-                  ? getCrewNamesByIds(mission.crew, crewData)
+                  ? getCrewNamesByIds(mission.crew, crewData, displayMode)
                   : Array.isArray(mission.characters) &&
                       typeof mission.characters[0] === "number"
-                    ? getCrewNamesByIds(mission.characters, crewData)
+                    ? getCrewNamesByIds(
+                        mission.characters,
+                        crewData,
+                        displayMode,
+                      )
                     : (mission.crew ?? mission.characters ?? [])
               }
             />

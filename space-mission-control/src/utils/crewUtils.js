@@ -1,11 +1,33 @@
-export function formatCrewName(crew) {
+// src/utils/crewUtils.js
+export function formatCrewName(crew, mode = "best") {
   if (!crew) return "Unknown";
-  if (crew.nickname) return crew.nickname;
-  if (crew.firstName && crew.lastName)
-    return `${crew.firstName} ${crew.lastName}`;
-  if (crew.firstName) return crew.firstName;
-  if (crew.name) return crew.name;
-  return "Unknown";
+  const { nickname, firstName, lastName, name } = crew;
+  const fullName = firstName && lastName ? `${firstName} ${lastName}` : null;
+
+  switch (mode) {
+    case "nickname":
+      return nickname || fullName || firstName || name || "Unknown";
+    case "full":
+      return fullName || nickname || firstName || name || "Unknown";
+    case "first":
+      return firstName || nickname || name || "Unknown";
+    case "last":
+      return last || fullName || nickname || name || "Unknown";
+    case "initials": {
+      if (firstName && lastName) {
+        return `${firstName.charAt(0)}${lastName.charAt(0)}`.toUpperCase();
+      }
+      if (firstName) return firstName.charAt(0).toUpperCase();
+      if (nickname) return nickname;
+      return name || "Unknown";
+    }
+    case "best":
+    default:
+      if (nickname) return nickname;
+      if (fullName) return fullName;
+      if (firstName) return firstName;
+      return "Unknown";
+  }
 }
 
 export function getCrewMap(crewArray = []) {
@@ -14,13 +36,17 @@ export function getCrewMap(crewArray = []) {
   return map;
 }
 
-export function getCrewNamesByIds(ids = [], crewArray = []) {
+/**
+ * ids: array of numeric IDs or strings
+ * crewArray: crew data array
+ * mode: 'first'|'full'|'nickname'|'best' etc.
+ */
+export function getCrewNamesByIds(ids = [], crewArray = [], mode = "best") {
   if (!Array.isArray(ids)) return [];
   const map = getCrewMap(crewArray);
   return ids.map((id) => {
     const c = map.get(id);
     if (!c) {
-      // keep a visible placeholder but log in dev
       if (
         typeof console !== "undefined" &&
         typeof process !== "undefined" &&
@@ -31,6 +57,6 @@ export function getCrewNamesByIds(ids = [], crewArray = []) {
       }
       return `#${id}`;
     }
-    return formatCrewName(c);
+    return formatCrewName(c, mode);
   });
 }
