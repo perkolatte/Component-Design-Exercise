@@ -7,6 +7,8 @@ import MissionCard from "./MissionCard";
 import MissionFilter from "./MissionFilter";
 import MissionAction from "./MissionAction";
 import "../styles/MissionControl.css";
+import { crew as crewData } from "../data/crew";
+import { getCrewNamesByIds } from "../utils/crewUtils";
 
 // Takes an array of missions from props, each mission with id, name, status, and crew.
 function MissionControl({ missions }) {
@@ -39,7 +41,16 @@ function MissionControl({ missions }) {
             <MissionCard
               name={mission.name}
               status={mission.status}
-              crew={mission.crew ?? mission.characters ?? []}
+              crew={
+                // if mission stores numeric IDs use crew data to format names
+                Array.isArray(mission.crew) &&
+                typeof mission.crew[0] === "number"
+                  ? getCrewNamesByIds(mission.crew, crewData)
+                  : Array.isArray(mission.characters) &&
+                      typeof mission.characters[0] === "number"
+                    ? getCrewNamesByIds(mission.characters, crewData)
+                    : (mission.crew ?? mission.characters ?? [])
+              }
             />
             <MissionAction
               missionId={mission.id}

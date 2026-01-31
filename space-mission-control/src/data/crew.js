@@ -3,6 +3,8 @@ export const crew = [
   {
     id: 1,
     name: "Gene Starwind",
+    firstName: "Gene",
+    lastName: "Starwind",
     role: "Captain / Gunman",
     description:
       "Outlaw, pilot and gunman. Captain of the Outlaw Star (XGP 15A-II).",
@@ -11,6 +13,8 @@ export const crew = [
   {
     id: 2,
     name: "Jim Hawking",
+    firstName: "Jim",
+    lastName: "Hawking",
     role: "Mechanic",
     description:
       "Eleven-year-old technical prodigy, co-owner of Starwind & Hawking.",
@@ -19,6 +23,8 @@ export const crew = [
   {
     id: 3,
     name: "Melfina",
+    firstName: "Melfina",
+    lastName: "",
     role: "Navigator",
     description:
       "Biological android (Melfina VSD02C) created to interface with the Galactic Leyline.",
@@ -27,6 +33,8 @@ export const crew = [
   {
     id: 4,
     name: "Aisha Clan-Clan",
+    firstName: "Aisha",
+    lastName: "Clan-Clan",
     role: "Muscle",
     description: "Fierce warrior of the Ctarl-Ctarl Empire.",
     link: "https://outlawstar.fandom.com/wiki/Aisha_Clan-Clan",
@@ -34,13 +42,26 @@ export const crew = [
   {
     id: 5,
     name: '"Twilight" Suzuka',
+    firstName: "Suzuka",
+    lastName: "",
+    nickname: "Twilight",
     role: "Muscle",
     description: "Renowned wandering assassin and skilled swordswoman.",
     link: "https://outlawstar.fandom.com/wiki/Suzuka",
   },
   {
+    id: 6,
+    name: "Unknown",
+    firstName: "Unknown",
+    lastName: "",
+    role: "Unknown",
+    description: "Placeholder - crew entry missing in data source",
+  },
+  {
     id: 7,
     name: "Gilliam II",
+    firstName: "Gilliam",
+    lastName: "II",
     role: "Ship AI",
     description: "Artificial intelligence of the Outlaw Star (XGP 15A-II).",
     link: "https://outlawstar.fandom.com/wiki/Gilliam_II",
@@ -48,6 +69,9 @@ export const crew = [
   {
     id: 8,
     name: '"Hot Ice" Hilda',
+    firstName: "Hilda",
+    lastName: "",
+    nickname: "Hot Ice",
     role: "Outlaw",
     description: "Outlaw who introduces Gene and Jim to the XGP.",
     link: "https://outlawstar.fandom.com/wiki/Hilda",
