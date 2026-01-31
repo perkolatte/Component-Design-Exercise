@@ -2,7 +2,7 @@
 
 Visual demo and small React app used to browse and manage fictional "Outlaw Star" missions.
 
-![Mission Control UI](public/screenshot.png)
+![Mission Control UI](screenshot.png)
 
 ## Overview
 
