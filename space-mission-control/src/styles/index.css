@@ -1,0 +1,72 @@
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+:root {
+  --bg-1: #04050a; /* deep navy */
+  --bg-2: #071428; /* gradient end */
+  --neon-orange: #ff7a2a; /* accent */
+  --neon-orange-rgb: 255, 122, 42;
+  --neon-pink: #ff3b9a;
+  --neon-pink-rgb: 255, 59, 154;
+  --neon-blue: #3dd3ff;
+  --neon-blue-rgb: 61, 211, 255;
+  --panel: rgba(255, 255, 255, 0.035);
+  --muted: #9aa8b2;
+  --glass: rgba(255, 255, 255, 0.03);
+  --text-main: #e6f7ff;
+  --card-border: rgba(255, 255, 255, 0.95);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* make sizing predictable so width:100% includes padding/border */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "DM Mono", "VT323", monospace;
+  background:
+    radial-gradient(
+      1200px 600px at 10% 10%,
+      rgba(17, 24, 39, 0.65),
+      transparent
+    ),
+    linear-gradient(180deg, var(--bg-1), var(--bg-2));
+  color: var(--text-main);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: inherit;
+}
+
+.sr-only,
+.screenreader-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap;
+}

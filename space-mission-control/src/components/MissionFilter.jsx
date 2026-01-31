@@ -1,11 +1,13 @@
 // MissionFilter enhances user experience by providing a mechanism to view missions by specific criteria, directly influencing the mission list rendered by MissionControl.
 
+import "../styles/MissionFilter.css";
+
 function MissionFilter({ filter, onFilterChange }) {
   const options = [
-    { key: "All", label: "All" },
-    { key: "Planned", label: "Planned" },
-    { key: "Active", label: "Active" },
-    { key: "Completed", label: "Completed" },
+    { key: "all", label: "All" },
+    { key: "planned", label: "Planned" },
+    { key: "active", label: "Active" },
+    { key: "completed", label: "Completed" },
   ];
 
   const handleKeyDown = (e, idx) => {
@@ -31,7 +33,7 @@ function MissionFilter({ filter, onFilterChange }) {
           role="radio"
           aria-checked={filter === opt.key}
           tabIndex={filter === opt.key ? 0 : -1}
-          className={filter === opt.key ? "Active" : ""}
+          className={filter === opt.key ? "active" : ""}
           onClick={() => onFilterChange(opt.key)}
           onKeyDown={(e) => handleKeyDown(e, idx)}
         >

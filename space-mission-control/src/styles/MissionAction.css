@@ -1,0 +1,44 @@
+.mission-action {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+  width: auto;
+  min-width: 0;
+}
+
+.mission-action button {
+  padding: 6px 10px;
+  border-radius: 0px;
+  border: 2px solid var(--neon-orange);
+  background: transparent;
+  color: var(--neon-orange);
+  cursor: pointer;
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  box-sizing: border-box;
+  width: 110px;
+  height: 36px;
+  transition:
+    background 120ms ease,
+    color 120ms ease,
+    transform 120ms ease;
+}
+
+.mission-action button:hover {
+  background: rgba(var(--neon-orange-rgb), 0.06);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.mission-action button.secondary {
+  border-color: var(--neon-blue);
+  color: var(--neon-blue);
+}
+
+.mission-action button.secondary:hover {
+  background: rgba(var(--neon-blue-rgb), 0.06);
+}
