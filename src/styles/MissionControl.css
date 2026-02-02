@@ -1,36 +1,40 @@
 .screenreader-only {
   position: absolute;
+  overflow: hidden;
   width: 1px;
   height: 1px;
   padding: 0;
   margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
   border: 0;
+  clip: rect(0, 0, 0, 0);
 }
 
-/* Mission Control layout + background */
-
-.mission-control{
-  width:100%;
-  margin:0;
-  padding:24px 28px 48px 28px;
-  position:relative;
+.mission-control {
+  position: relative;
+  width: 100%;
+  padding: 24px 28px 48px 28px;
+  margin: 0;
   background: transparent;
 }
 
-  h1{
-    margin:8px 0 18px 12px;
-    font-weight:700;
-    letter-spacing:1px;
-    color:#ffffff;
-    font-size:28px;
-  }
-  content: "";
+h1 {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 18px 0;
+  color: #fff;
+  text-shadow:
+    0 0 12px rgba(255, 106, 0, 0.12),
+    0 0 36px rgba(61, 211, 255, 0.03);
+  letter-spacing: 1px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.mission-control::before {
   position: absolute;
-  left: 50%;
+  z-index: 0;
   top: -120px;
-  transform: translateX(-50%);
+  left: 50%;
   width: 700px;
   height: 700px;
   border-radius: 50%;
@@ -45,36 +49,24 @@
       rgba(255, 77, 166, 0.02),
       rgba(61, 211, 255, 0.02)
     );
-  filter: blur(10px) saturate(120%);
+  content: "";
+  transform: translateX(-50%);
   pointer-events: none;
-  z-index: 0;
+  filter: blur(10px) saturate(120%);
 }
 
-h1 {
-  margin: 0 0 18px 0;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #fff;
-  text-shadow:
-    0 0 12px rgba(255, 106, 0, 0.12),
-    0 0 36px rgba(61, 211, 255, 0.03);
-  position: relative;
-  z-index: 2;
+.mission-list {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
 }
 
-
-.mission-list{
-  display:block;
-  width:100%;
-  margin-top:12px;
-}
-
-.mission-item{
-  display:flex;
-  gap:12px;
-  align-items:flex-start;
-  width:100%;
-  margin-bottom:18px;
+.mission-item {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 18px;
+  gap: 12px;
 }
 
 @media (max-width: 640px) {

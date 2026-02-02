@@ -1,33 +1,29 @@
 .mission-filter {
-  display: flex;
-  gap: 12px;
-  margin: 8px 0 18px 12px;
   position: relative;
+  display: flex;
+  margin: 8px 0 18px 12px;
+  gap: 12px;
 }
 
 .mission-filter button {
   --pad-y: 8px;
   padding: 6px 18px;
-  border-radius: 0px;
   border: 2px solid var(--neon-pink);
-  background: transparent;
+  border-radius: 0px;
   color: var(--text-main);
-  font-family: inherit;
-  font-size: 13px;
+  background: transparent;
   cursor: pointer;
   transition: all 120ms ease;
+  font-family: inherit;
+  font-size: 13px;
 }
 
 .mission-filter button.active,
 .mission-filter button[aria-checked="true"] {
-  background: rgba(var(--neon-pink-rgb), 0.06);
   color: var(--text-main);
+  background: rgba(var(--neon-pink-rgb), 0.06);
 }
 
-.mission-filter button:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(255, 59, 59, 0.06);
-}
 .mission-filter button:focus {
   outline: none;
   box-shadow: 0 0 0 4px rgba(var(--neon-blue-rgb), 0.08);

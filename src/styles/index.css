@@ -1,18 +1,18 @@
 .sr-only {
   position: absolute;
+  overflow: hidden;
   width: 1px;
   height: 1px;
   padding: 0;
   margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
   border: 0;
+  clip: rect(0, 0, 0, 0);
 }
 
 :root {
-  --bg-1: #04050a; /* deep navy */
-  --bg-2: #071428; /* gradient end */
-  --neon-orange: #ff7a2a; /* accent */
+  --bg-1: #04050a;
+  --bg-2: #071428;
+  --neon-orange: #ff7a2a;
   --neon-orange-rgb: 255, 122, 42;
   --neon-pink: #ff3b9a;
   --neon-pink-rgb: 255, 59, 154;
@@ -31,7 +31,6 @@ body,
   height: 100%;
 }
 
-/* make sizing predictable so width:100% includes padding/border */
 *,
 *::before,
 *::after {
@@ -40,7 +39,7 @@ body,
 
 body {
   margin: 0;
-  font-family: "DM Mono", "VT323", monospace;
+  color: var(--text-main);
   background:
     radial-gradient(
       1200px 600px at 10% 10%,
@@ -48,7 +47,7 @@ body {
       transparent
     ),
     linear-gradient(180deg, var(--bg-1), var(--bg-2));
-  color: var(--text-main);
+  font-family: "DM Mono", "VT323", monospace;
 }
 
 h1,
@@ -61,12 +60,12 @@ h4 {
 .sr-only,
 .screenreader-only {
   position: absolute;
+  overflow: hidden;
   width: 1px;
   height: 1px;
   padding: 0;
   margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
   border: 0;
   white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
 }
