@@ -1,6 +1,7 @@
 // MissionFilter enhances user experience by providing a mechanism to view missions by specific criteria, directly influencing the mission list rendered by MissionControl.
 
 import "../styles/MissionFilter.css";
+import { useEffect, useRef, useState } from "react";
 
 function MissionFilter({ filter, onFilterChange }) {
   const options = [
@@ -20,9 +21,33 @@ function MissionFilter({ filter, onFilterChange }) {
     }
   };
 
+  const containerRef = useRef(null);
+  const [twoRow, setTwoRow] = useState(false);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    const check = () => {
+      // if horizontal scroll needed, buttons don't fit in one row
+      const needsWrap = el.scrollWidth > el.clientWidth + 1; // small tolerance
+      setTwoRow(needsWrap);
+    };
+
+    check();
+    const ro = new ResizeObserver(check);
+    ro.observe(el);
+    window.addEventListener("resize", check);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", check);
+    };
+  }, []);
+
   return (
     <div
-      className="mission-filter"
+      ref={containerRef}
+      className={"mission-filter" + (twoRow ? " two-row" : "")}
       role="radiogroup"
       aria-label="Filter Missions by status"
     >

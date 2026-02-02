@@ -11,7 +11,7 @@
 
 .mission-control {
   position: relative;
-  width: 100%;
+  max-width: 100%;
   padding: 24px 28px 48px 28px;
   margin: 0;
   background: transparent;
@@ -71,6 +71,7 @@ h1 {
 
 @media (max-width: 640px) {
   .mission-control {
+    width: auto;
     padding: 16px;
     margin: 18px;
   }

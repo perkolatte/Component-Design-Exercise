@@ -1,19 +1,24 @@
 .mission-filter {
   position: relative;
   display: flex;
-  margin: 8px 0 18px 12px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 8px 0 18px 0;
   gap: 12px;
 }
 
 .mission-filter button {
   --pad-y: 8px;
-  padding: 6px 18px;
+  flex: 0 0 auto;
+  min-width: 0;
+  padding: 6px 12px;
   border: 2px solid var(--neon-pink);
   border-radius: 0px;
   color: var(--text-main);
   background: transparent;
   cursor: pointer;
   transition: all 120ms ease;
+  text-align: center;
   font-family: inherit;
   font-size: 13px;
 }
@@ -27,4 +32,19 @@
 .mission-filter button:focus {
   outline: none;
   box-shadow: 0 0 0 4px rgba(var(--neon-blue-rgb), 0.08);
+}
+
+.mission-filter.two-row button {
+  flex: 1 1 calc((100% - 12px) / 2);
+  min-width: 100px;
+}
+
+@media (max-width: 411px) {
+  .mission-filter {
+    flex-wrap: wrap;
+  }
+  .mission-filter button {
+    flex: 1 1 calc((100% - 12px) / 2);
+    min-width: 0;
+  }
 }

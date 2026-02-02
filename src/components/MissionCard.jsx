@@ -11,12 +11,16 @@ function MissionCard({ name, status, crew, actions }) {
 
   return (
     <div className="mission-card">
-      <div className="mission-card-content">
+      <div className="mission-card-top">
         <h2>{name}</h2>
-        <p>Status: {status}</p>
-        <p>Crew: {crewDisplay}</p>
       </div>
 
+      <div className="mission-card-bottom">
+        <div className="mission-card-details">
+          <p>Status: {status}</p>
+          <p>Crew: {crewDisplay}</p>
+        </div>
+      </div>
       {actions && <div className="mission-card-actions">{actions}</div>}
     </div>
   );

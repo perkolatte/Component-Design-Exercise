@@ -1,11 +1,10 @@
 .mission-card {
-  display: flex;
-  align-items: center;
-  flex: 1 1 auto;
-  justify-content: space-between;
+  --action-w: 110px;
+  position: relative;
+  display: grid;
   width: 100%;
   max-width: 100%;
-  padding: 18px;
+  padding: 9px 15px 12px 15px;
   border: 3px solid var(--card-border);
   border-radius: 0;
   background: linear-gradient(
@@ -16,15 +15,20 @@
   box-shadow:
     0 10px 24px rgba(0, 0, 0, 0.6),
     inset 0 1px 0 rgba(255, 255, 255, 0.02);
-  gap: 16px;
+  grid-template-columns: 1fr var(--action-w);
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "title title" "bottom bottom";
+  gap: 0px 16px;
 }
 
 .mission-card h2 {
-  margin: 0 0 8px 0;
+  margin: 6px 0 6px 0;
   color: var(--neon-orange);
-  word-break: break-word;
+  word-break: normal;
+  overflow-wrap: break-word;
   font-family: inherit;
   font-size: 18px;
+  grid-area: title;
 }
 
 .mission-card p {
@@ -33,15 +37,30 @@
   font-size: 13px;
 }
 
-.mission-card-content {
-  flex: 1 1 auto;
+.mission-card-top {
+  grid-area: title;
+}
+
+.mission-card-bottom {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
   min-width: 0;
+  padding-right: calc(var(--action-w) + 20px);
+  grid-area: bottom;
+  gap: 8px;
 }
 
 .mission-card-actions {
-  display: flex;
-  align-items: center;
-  flex: 0 0 auto;
-  justify-content: flex-end;
-  margin-left: 12px;
+  position: absolute;
+  z-index: 2;
+  right: 15px;
+  bottom: 18px;
+  margin: 0px;
+}
+
+.mission-card-details {
+  flex: 1 1 auto;
+  min-width: 0;
 }
